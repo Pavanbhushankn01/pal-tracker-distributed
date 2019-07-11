@@ -41,8 +41,10 @@ namespace BacklogServer
                   BaseAddress = new Uri(Configuration.GetValue<string>("REGISTRATION_SERVER_ENDPOINT"))
               };
 
-              return new ProjectClient(httpClient);
+             var logger = sp.GetService<ILogger<ProjectClient>>();
+		return new ProjectClient(httpClient, logger);
           });
+		 services.AddHystrixMetricsStream(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
