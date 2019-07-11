@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Steeltoe.CircuitBreaker.Hystrix;
+using Backlog;
 
-namespace Allocations
+namespace Backlog
 {
     public class GetProjectCommand : HystrixCommand<ProjectInfo>
     {

@@ -9,6 +9,7 @@ using Steeltoe.CloudFoundry.Connector.MySql.EFCore;
 using Timesheets;
 using Pivotal.Discovery.Client;
 using Steeltoe.Common.Discovery;
+using Steeltoe.CircuitBreaker.Hystrix;
 
 namespace TimesheetsServer
 {
