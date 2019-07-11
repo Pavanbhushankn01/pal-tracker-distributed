@@ -6,7 +6,7 @@ applications:
   routes:
   - route: registration-pal-pvbg.cfapps.io
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-pvbg.cfapps.io
+  
   services:
   - tracker-registration-database
+  - tracker-service-registry
